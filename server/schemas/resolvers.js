@@ -1,13 +1,10 @@
-// import User and Thought models
+// import the User and Thought models
 const { User, Thought } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-          // helloWorld: () => {
-            // return 'Hello world!';
-
         me: async (parent, args, context) => {
           if (context.user) {
             const userData = await User.findOne({ _id: context.user._id })
@@ -31,7 +28,6 @@ const resolvers = {
               return Thought.findOne({ _id });
             },
 
-
         // get all users
         users: async () => {
           return User.find()
@@ -40,19 +36,12 @@ const resolvers = {
             .populate('thoughts');
         },
 
-        // // get a user by username
+        //  get a user by username
         user: async (parent, { username }) => {
           return User.findOne({ username })
             .select('-__v -password')
             .populate('friends')
-            .populate('thoughts');
-        
-        
-
-        // thoughts: async () => {
-        //   return Thought.find().sort({ createdAt: -1 });
-
-       
+            .populate('thoughts');      
        
      }
     },
@@ -85,8 +74,6 @@ const resolvers = {
         return { token, user }; 
       },
 
-      // -- methods created after adding JWT, 
-      
       // only logged in users w/ a token should be able to access this mutation 
       addThought: async (parent, args, context) => {
         if (context.user) {

@@ -4,9 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 
 //  React Router gives the single-page the multi-page feel
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// adding the other pages which will have React routes
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import SingleThought from './pages/SingleThought';
@@ -15,9 +13,8 @@ import Signup from './pages/Signup';
 
 
 //  create the Apollo Provider
-  // these two libraries will import statements
-  import { ApolloProvider } from '@apollo/react-hooks';
-  import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 
 //  instruct Apollo instance to retrieve token every time a GraphQL request is make
 const client = new ApolloClient({
@@ -32,8 +29,6 @@ const client = new ApolloClient({
   },
   uri: '/graphql'
 });
-
-
 
 
 function App() {

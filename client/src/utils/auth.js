@@ -1,23 +1,19 @@
-// new -- add JSON Web Tokens (JWT), requires npm install jwt-decode
+//  add JSON Web Tokens (JWT), requires npm install jwt-decode
 import decode from 'jwt-decode';
 
 
-// new -- adding JWT authentication
+//  adding JWT for authentication
 class AuthService {
-    // retrieve data saved in token
+    // token
     getProfile() {
       return decode(this.getToken());
     }
   
-    // check if the user is still logged in
     loggedIn() {
-      // Checks if there is a saved token and it's still valid
       const token = this.getToken();
-      // use type coersion to check if token is NOT undefined and the token is NOT expired
       return !!token && !this.isTokenExpired(token);
     }
   
-    // check if the token has expired
     isTokenExpired(token) {
       try {
         const decoded = decode(token);
@@ -31,24 +27,22 @@ class AuthService {
       }
     }
   
-    // retrieve token from localStorage
+    // retrieve the token from localStorage
     getToken() {
-      // Retrieves the user token from localStorage
       return localStorage.getItem('id_token');
     }
   
-    // set token to localStorage and reload page to homepage
+    // set the token to localStorage and reloads the page to the homepage
     login(idToken) {
-      // Saves user token to localStorage
       localStorage.setItem('id_token', idToken);  
       window.location.assign('/');
     }
   
-    // clear token from localStorage and force logout with reload
+    // clears the token from the localStorage and forces a logout 
     logout() {
-      // Clear user token and profile data from localStorage
+      // clears the token
       localStorage.removeItem('id_token');
-      // this will reload the page and reset the state of the application
+      // reload page and resets the state 
       window.location.assign('/');
     }
   }

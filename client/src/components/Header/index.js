@@ -4,10 +4,9 @@ import Auth from '../../utils/auth';
 
 
 const Header = () => {
-
-const logout = event => {
-    event.preventDefault();
-    Auth.logout();
+  const logout = event => {
+      event.preventDefault();
+      Auth.logout();
 };
 
 return (

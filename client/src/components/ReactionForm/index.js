@@ -1,29 +1,18 @@
-// new -- reaction component
-
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_REACTION } from '../../utils/mutations';
 
 const ReactionForm = ({ thoughtId }) => {
-
-    const [reactionBody, setBody] = useState('');
-    const [characterCount, setCharacterCount] = useState(0);
-    //const [addReaction, {error}] = useMutation(ADD_REACTION);
-
-    const handleChange = event => {
+  const [reactionBody, setBody] = useState('');
+  const [characterCount, setCharacterCount] = useState(0);
+  const handleChange = event => {
         if (event.target.value.length <= 280) {
             setBody(event.target.value);
             setCharacterCount(event.target.value.length);
         }
-    };
+};
 
-    // const handleFormSubmit = async event => {
-    //     event.preventDefault();
-    //     setBody('');
-    //     setCharacterCount(0);
-    // };
-
-    const handleFormSubmit = async event => {
+const handleFormSubmit = async event => {
         event.preventDefault();
         setBody('');
         setCharacterCount(0);
@@ -40,11 +29,11 @@ const ReactionForm = ({ thoughtId }) => {
             console.error(e);
         }
 
+};
 
-    };
-        const [addReaction, { error }] = useMutation(ADD_REACTION);
+const [addReaction, { error }] = useMutation(ADD_REACTION);
 
-  return (
+return (
     <div>
        <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
             Character Count: {characterCount}/280

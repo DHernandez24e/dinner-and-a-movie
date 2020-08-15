@@ -1,20 +1,12 @@
 import React from 'react';
-
 import ReactionList from '../components/ReactionList';
 import ReactionForm from '../components/ReactionForm';
-
-
 import { useParams } from 'react-router-dom';
-
-
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_THOUGHT } from '../utils/queries';
-
-
 import Auth from '../utils/auth';
 
 const SingleThought = props => {
-
     const { id: thoughtId } = useParams();
     const { loading, data } = useQuery(QUERY_THOUGHT, {
       variables: { id: thoughtId }
@@ -22,9 +14,9 @@ const SingleThought = props => {
     const thought = data?.thought || {};
     if (loading) {
       return <div>Loading...</div>;
-    }
+}
 
-    return (
+return (
       <div>
        <div>
           <div className="card mb-3">
