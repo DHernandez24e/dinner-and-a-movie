@@ -1,29 +1,25 @@
 import React from 'react';
-//  import the apollo hooks
+// new -- import the apollo hooks
 import { useQuery } from '@apollo/react-hooks';
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 import FriendList from '../components/FriendList';
-//  add JSON web token (JWT)
+// new -- add JSON web token (JWT)
 import Auth from '../utils/auth';
-//  import queries
+// new -- import queries
 import { QUERY_THOUGHTS, QUERY_ME_BASIC} from '../utils/queries';
 
 
 const Home = () => {
-  // use useQuery hook to make GraphQL query requests
+ 
   const { loading, data } = useQuery(QUERY_THOUGHTS);
-  // use object destructuring to extract `data` from the `useQuery` Hook's response and rename it `userData` to be more descriptive
-  const { data: userData } = useQuery(QUERY_ME_BASIC);
-
+  const { data: userData } = useQuery(QUERY_ME_BASIC); 
   const thoughts = data?.thoughts || []; 
-
   const loggedIn = Auth.loggedIn();
 
   return (
     <main>
       <div className="flex-row justify-space-between">
-
         {loggedIn && (
           <div className="col-12 mb-3">
             <ThoughtForm />

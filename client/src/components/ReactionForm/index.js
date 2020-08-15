@@ -41,7 +41,7 @@ return (
         </p>
         <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
         <textarea
-          placeholder="Leave a reaction to this thought..."
+          placeholder="Reply here..."
           className="form-input col-12 col-md-9"
           onChange={handleChange}
           value={reactionBody}
