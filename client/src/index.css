@@ -57,7 +57,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  /* color: var(--light); */
+  /* color: var(--quatrinary); */
+  font-family: 'Mono', sans-serif;
+  font-weight: 400;
+  margin: 25px 0;
+  font-size: 1.25rem;
 }
 
 h3 {
@@ -86,6 +90,11 @@ p {
 a {
   color: var(--dark);
   text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Mono', sans-serif;
+  font-weight: 400;
+  font-size: 1.00rem;
+
 }
 
 a:visited {

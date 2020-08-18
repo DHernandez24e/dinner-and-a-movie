@@ -52,6 +52,28 @@ const typeDefs = gql`
   }
 `;
 
+
+// placeeholders
+
+    // type Movie {
+    //   movieId: ID
+    //   authors:[String]
+    //   description: String
+    //   title: String
+    //   image: String
+    //   link: String
+    // }
+    // input savedMovie {
+    //   movieId: String
+    //   title: String
+    //   authors: [String]
+    //   description: String
+    //   image: String
+    //   link: String
+    // }
+
+
 // export the typeDefs
 module.exports = typeDefs;
+
 

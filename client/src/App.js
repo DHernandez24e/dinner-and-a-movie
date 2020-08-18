@@ -13,8 +13,8 @@ import NoMatch from './pages/NoMatch';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
-import searchFood from './pages/searchFood';
-import searchMovie from './pages/searchMovie';
+// import SearchMovies from './pages/SearchMovies';
+// import searchFood from './pages/searchFood';
 
 
 // create the Apollo Provider
@@ -48,16 +48,16 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/thought" component={SingleThought} />
-              <Route exact path="/profile/:username?" component={Profile} />
-              <Route exact path="/thought/:id" component={SingleThought} />
-              <Route exact path="/profile/:username?" component={searchMovie} />
-              <Route exact path="/profile/:username?" component={searchFood} />
-              <Route component={NoMatch} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/signup" component={Signup} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/thought" component={SingleThought} />
+                <Route exact path="/profile/:username?" component={Profile} />
+                <Route exact path="/thought/:id" component={SingleThought} />
+                {/* <Route exact path='/' component={SearchMovies} />
+                <Route exact path='/' component={searchFood} /> */}
+                <Route component={NoMatch} />
             </Switch>
           </div>
           <Footer />

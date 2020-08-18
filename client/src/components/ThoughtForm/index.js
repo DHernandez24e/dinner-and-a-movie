@@ -7,9 +7,7 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 const ThoughtForm = () => {
 
-        
-          
-
+  
         const [addThought, { error }] = useMutation(ADD_THOUGHT, {
             update(cache, { data: { addThought } }) {
                 try {
@@ -74,15 +72,15 @@ const ThoughtForm = () => {
             className="flex-row justify-center justify-space-between-md align-stretch"
             onSubmit={handleFormSubmit}
         >
-      <textarea
-            placeholder="Chat here..."
-            value={thoughtText}
-            className="form-input col-12 col-md-9"
-            onChange={handleChange}
-        ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
-        </button>
+            <textarea
+                  placeholder="Chat here..."
+                  value={thoughtText}
+                  className="form-input col-12 col-md-9"
+                  onChange={handleChange}
+              ></textarea>
+            <button className="btn col-12 col-md-3" type="submit">
+              Submit
+            </button>
       </form>
     </div>
   );

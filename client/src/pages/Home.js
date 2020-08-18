@@ -4,27 +4,38 @@ import { useQuery } from '@apollo/react-hooks';
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 import FriendList from '../components/FriendList';
-// new -- add JSON web token (JWT)
+
+// add JSON web token (JWT)
 import Auth from '../utils/auth';
-// new -- import queries
+// import queries
 import { QUERY_THOUGHTS, QUERY_ME_BASIC} from '../utils/queries';
 
+// placeholders - imported APIs
+  // import SearchMovies from './SearchMovies';
+  // import searchFood from './searchFood';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
-
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-
-
   const thoughts = data?.thoughts || []; 
- 
-
   const loggedIn = Auth.loggedIn();
 
   return (
     <main>
-      <div className="flex-row justify-space-between">
+          
+    <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+      <h2>Search for a Movie</h2>
+      {/* <SearchMovies movies={movies} title="Search here:" /> */}
+      {/* <SearchMovies  title="Search here:" /> */}
+    </div>
 
+    <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+      <h2>Search for Takeout</h2>
+      {/* <searchFood foods={foods} title="Search here:" /> */}
+      {/* <searchFood  title="Search here:" /> */}
+   </div>
+
+      <div className="flex-row justify-space-between">
         {loggedIn && (
           <div className="col-12 mb-3">
             <ThoughtForm />
@@ -36,9 +47,13 @@ const Home = () => {
              ) : (
                 <ThoughtList thoughts={thoughts} title="Chat here:" />
               )}
-            </div>
+          </div>
+
+       
 
               {loggedIn && userData ? (
+
+                
                 <div className="col-12 col-lg-3 mb-3">
                   <FriendList
                     username={userData.me.username}
@@ -48,13 +63,7 @@ const Home = () => {
             </div>
           ) : null}
 
-              <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-                <h2>Search for a Movie</h2>
-                </div>
-
-                <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-                <h2>Search for Takeout</h2>
-                </div>
+              
     </div>
   </main>
   );

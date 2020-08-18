@@ -124,6 +124,32 @@ const resolvers = {
   }
 };
   
+// placeholders 
+
+        // //methods created after adding JWT,       
+        // saveMovie: async (parent, { input }, context) => {
+        //   if (context.user) {
+        //   const savedMovieUser = await User.findOneAndUpdate (
+        //       { _id: context.user._id },
+        //       { $push: { savedMovies: input  } },
+        //       { new: true, runValidators: true }
+        //     );
+        //   return { savedMovieUser };
+        //   }
+        //   throw new AuthenticationError('You need to be logged in!');
+        // },
+
+        // removeMovie: async (parent, {movieId}, context) => {
+        //     const savedMovieUser = await User.findOneAndUpdate (
+        //       { _id: context.user._id },
+        //       { $pull: { savedMovies: { movieId: movieId } } },
+        //       { new: true }
+        //     );
+        //     return  savedMovieUser;
+        // },
+        // }
+        // };
+
   
   //export
   module.exports = resolvers;
