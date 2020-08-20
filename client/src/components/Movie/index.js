@@ -1,33 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import apiCall from '../../utils/movieApi';
+import { CardColumns, Card, Button, Form, Container, ModalTitle } from 'react-bootstrap';
 
 const MovieContainer = () => {
+
+    const [movieData, setMovieData] = useState([]);
     
     const handleFormSubmit = async (event) => {
-      
+        event.preventDefault();
+
+        const response = apiCall();
+
+        const callReturn = await response.then(data => data);
+
+        const { title } = callReturn;
+        
+        setMovieData([{ title: title, }])
+        console.log(movieData)
     }
 
     return (
-        <div>
-            <form onSubmit={handleFormSubmit}>
-                <label for='locationInput' class="indent">Title:</label>
-                <input type='text' name='locationInput' class="indent"></input>
-                <select>
-                    <option value='action'>Action</option>
-                    <option value='comedy'>Comedy</option>
-                    <option value='documentatary'>Documentatary</option>
-                    <option value='sci-fi'>Sci-Fi</option>
-                    <option value='drama'>Drama</option>
-                    <option value='family'>Family</option>
-                    <option value=''>Random</option>
-                </select>
-                <button type='submit'>Submit</button>
-            </form>
-            <div>
-                {/* <p>Hi</p>
-                <p>Hello</p> */}
-            </div>
-        </div>
+        <Container>
+            <Form onSubmit={handleFormSubmit}>
+                <Button type='submit' variant='success' size='sm'>Generate Random Movie</Button>
+            </Form>
+            <CardColumns>
+            {movieData.map((results) => {
+                    return(
+                        <Card border='dark'>
+                            <Card.Body>
+                                <h3>{results.title}</h3>
+                            </Card.Body>
+                        </Card>
+                    )
+                })   
+                }
+            </CardColumns>
+        </Container>
     )
 }
+
 
 export default MovieContainer;
