@@ -4,7 +4,7 @@ Node.js website where users can search for a restaurant nearby and also a movie 
 
 ## GitHub URL
 
-https://github.com/ktrnthsnr/dinner-and-movie
+https://github.com/DHernandez24e/dinner-and-a-movie
 
 ## React Website in Heroku
 
