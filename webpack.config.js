@@ -8,10 +8,10 @@ console.log(path.join(__dirname, './'));
 
 module.exports = { 
     entry: 
-      './public/index.html',
+      './client/public/index.html',
         
     output: {
-        path: __dirname + './public/js',
+        path: __dirname + './client/public/js',
         filename: 'index.bundle.js'
       },
       mode: 'development',
@@ -26,9 +26,9 @@ module.exports = {
       fingerprints: false,
       inject: false,
       icons: [{
-        src: path.resolve('./public/icons/android-chrome-512x512.png'),
+        src: path.resolve('./client/public/icons/android-chrome-512x512.png'),
         sizes: [96, 128, 192, 256, 384, 512],
-        destination: path.join('./public/icons')
+        destination: path.join('./client/public/icons')
       }]
     })
   ], 
