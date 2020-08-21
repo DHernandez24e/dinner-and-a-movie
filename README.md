@@ -33,7 +33,7 @@ https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
     * NoSQL databases - MongoDB and Mongoose ODB
     * React single-page applications - React, Apollo Provider        
     * GraphQL APIs and Apollo server\client
-    * Third party APIs - Yelp and Netflix
+    * 2 Third party APIs - Zumato to search for a restaurant nearby and UnongsND to generate a random movie
     * Concurrent servers in a MERN app 	Client\server - npm concurrently
     * Authentication - JSON Web Tokens
 
@@ -62,7 +62,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - The website has been deployed to a Heroku app containing an mLab MongoDB add on, to deploy to a production-like environment.
 - https://easy-dinner-movie.herokuapp.com/ 
 
--	![Dinner and a Movie](./loggedinhome.jpg "Dinner and a Movie")
+-	![Dinner and a Movie](./newhomepage.jpg "Dinner and a Movie")
 
 ### Local install, seed and usage 
 

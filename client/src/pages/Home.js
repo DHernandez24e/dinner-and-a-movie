@@ -31,7 +31,7 @@ const Home = () => {
       <div className="d-flex justify-content-end">     
 
                <div className={`col-12 mb-3`}>
-                      <h2>Watch a movie</h2>
+                      <h2>Not sure what to watch?</h2>
                       <div class="indent"> <MovieContainer></MovieContainer> </div>
                 </div> 
 
