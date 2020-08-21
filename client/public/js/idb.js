@@ -1,11 +1,11 @@
 // IndexedDB 
 let db;
-const request = indexedDB.open('dinnermovi', 1);
+const request = indexedDB.open('dinnermovie', 1);
 
 
 request.onupgradeneeded = function(event) {
     const db = event.target.result;
-    db.createObjectStore('new_dinnermovi', { autoIncrement: true });
+    db.createObjectStore('new_dinnermovie', { autoIncrement: true });
   };
 
 request.onsuccess = function(event) {
@@ -21,20 +21,20 @@ request.onsuccess = function(event) {
   };
 
 function saveRecord(record) {
-    const transaction = db.transaction(['new_dinnermovi'], 'readwrite');
+    const transaction = db.transaction(['new_dinnermovie'], 'readwrite');
 
-    const dinnermoviObjectStore = transaction.objectStore('new_dinnermovi');
+    const dinnermovieObjectStore = transaction.objectStore('new_dinnermovie');
 
-    dinnermoviObjectStore.add(record);
+    dinnermovieObjectStore.add(record);
   }
 
   function uploadDinnerMovieDB() {
 
-    const transaction = db.transaction(['new_dinnermovi'], 'readwrite');
+    const transaction = db.transaction(['new_dinnermovie'], 'readwrite');
 
-    const dinnermoviObjectStore = transaction.objectStore('new_dinnermovi');
+    const dinnermovieObjectStore = transaction.objectStore('new_dinnermovie');
 
-    const getAll = dinnermoviObjectStore.getAll();
+    const getAll = dinnermovieObjectStore.getAll();
 
 
 getAll.onsuccess = function() {
@@ -55,11 +55,11 @@ getAll.onsuccess = function() {
             throw new Error(serverResponse);
           }
      
-          const transaction = db.transaction(['new_dinnermovi'], 'readwrite');
+          const transaction = db.transaction(['new_dinnermovie'], 'readwrite');
         
-          const dinnermoviObjectStore = transaction.objectStore('new_dinnermovi');
+          const dinnermovieObjectStore = transaction.objectStore('new_dinnermovie');
        
-          dinnermoviObjectStore.clear();
+          dinnermovieObjectStore.clear();
 
           alert('Transaction data has been submitted!');
         })
