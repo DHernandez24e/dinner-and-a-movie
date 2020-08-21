@@ -30,9 +30,7 @@ https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
 
 - Core skills and technologies leveraged in the creation of this site, include
 
-    * Performant JavaScript - to provide a fast and efficient response for the end user
     * NoSQL databases - MongoDB and Mongoose ODB
-    * Progressive Web Applications - to allow this application to be downloadable to the user's browser and used with no internet connectivity
     * React single-page applications - React, Apollo Provider        
     * GraphQL APIs and Apollo server\client
     * Third party APIs - Yelp and Netflix
