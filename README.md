@@ -4,15 +4,11 @@ Node.js website where users can search for a restaurant nearby and also a movie 
 
 ## GitHub URL
 
-https://github.com/ktrnthsnr/dinner-and-movie
+https://github.com/DHernandez24e/dinner-and-a-movie
 
 ## React Website in Heroku
 
 https://easy-dinner-movie.herokuapp.com/
-
-## Walkthrough of the application
-
-https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
 
 ## Table of Contents
 
@@ -110,7 +106,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Contribution
 
-Asa Katarina Thisner, Diego Hernandez, Katherine Guerin, Chris Acedo
+Katherine, Katarina, Chris, Diego
 
 ## React
 
