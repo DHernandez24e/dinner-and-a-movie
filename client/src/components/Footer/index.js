@@ -1,19 +1,20 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer class="page-footer font-small cyan darken-3">
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-md-12 py-5">
             <div class="mb-5 flex-center">
               {/* Facebook */}
-              <a class="fb-ic">
-                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
+              <a href="https://www.facebook.com">
+                <img src="../images/facebook.svg" height="60" width="60"/>
+                
+                {/* <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
                   {" "}
-                </i>
+                </i> */}
               </a>
               {/* Twitter */}
               <a class="tw-ic">
@@ -38,7 +39,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div class="body text-center bg-light text-primary p-2 fixed-bottom h4">
+      <div class="footer-copyright text-center bg-light text-primary p-2 h4">
         © 2020 Copyright:
         <a href="https://github.com/DHernandez24e/dinner-and-a-movie">
           {" "}
@@ -50,9 +51,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-{
-  /* <footer className="bg-light text-primary p-3">
-<div className="container">&copy; 2020 Dinner and a Movie</div>
-</footer> */
-}
