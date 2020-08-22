@@ -8,7 +8,11 @@ https://github.com/DHernandez24e/dinner-and-a-movie
 
 ## React Website in Heroku
 
-https://easy-dinner-movie.herokuapp.com/
+https://easy-dinner-movie.herokuapp.com/  
+
+## Walkthrough of the application
+
+https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
 
 ## Table of Contents
 
@@ -26,12 +30,10 @@ https://easy-dinner-movie.herokuapp.com/
 
 - Core skills and technologies leveraged in the creation of this site, include
 
-    * Performant JavaScript - to provide a fast and efficient response for the end user
     * NoSQL databases - MongoDB and Mongoose ODB
-    * Progressive Web Applications - to allow this application to be downloadable to the user's browser and used with no internet connectivity
     * React single-page applications - React, Apollo Provider        
     * GraphQL APIs and Apollo server\client
-    * Third party APIs - Yelp and Netflix
+    * 2 Third party APIs - Zumato to search for a restaurant nearby and UnongsND to generate a random movie
     * Concurrent servers in a MERN app 	Client\server - npm concurrently
     * Authentication - JSON Web Tokens
 
@@ -58,9 +60,9 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ### Website
 - The website has been deployed to a Heroku app containing an mLab MongoDB add on, to deploy to a production-like environment.
-- https://easy-dinner-movie.herokuapp.com/
+- https://easy-dinner-movie.herokuapp.com/ 
 
--	![Dinner and a Movie](./loggedinhome.jpg "Dinner and a Movie")
+-	![Dinner and a Movie](./newhomepage.jpg "Dinner and a Movie")
 
 ### Local install, seed and usage 
 
@@ -76,8 +78,6 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 - To view the site locally on the development server, first install the npm packages
     - $ `npm i` or `npm install`
-- Then seed the data
-    - $ `npm run seed`
 - Start the MongoDB
     - $ `mongod`
 - To test the Apollo server sider connections to the Express.js, (to test the schemas and server.js), run the following 
@@ -87,6 +87,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - $ `http://localhost:3001/graphql`
 
 #### Client directory - React front-end development server
+
 - If cloning to your local drive, install the npm packages 
     - $ `cd client`
     - $ `npm i` or `npm install`
@@ -99,14 +100,12 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Testing
 
-- The development server will then run under the /server directory, React development under the /client directory. To test for the client, run both servers, cd to each directory, then enter `npm start` in two separate bash windows.
-
-- There are two servers running through localhost,  on two different ports,
-![React And Graphql](./img/ReactAndQueryQL.jpg "React And Graphql")
+- The development server will then run under the /server directory, React development under the /client directory. To test for the client, run both servers, by entering `npm start` from the root. Then open a browser, browser in your React environment, 
+    - `http://localhost:3000/`
 
 ## Contribution
 
-Katherine, Katarina, Chris, Diego
+Asa Katarina Thisner, Diego Hernandez, Katherine Guerin, Chris Acedo
 
 ## React
 
