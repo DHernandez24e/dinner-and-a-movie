@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -8,31 +9,28 @@ const Footer = () => {
         <div class="row">
           <div class="col-md-12 py-5">
             <div class="mb-5 flex-center">
+
+
               {/* Facebook */}
               <a href="https://www.facebook.com">
-                <img src="../images/facebook.svg" height="60" width="60"/>
-                
-                {/* <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
-                  {" "}
-                </i> */}
+                <img src="./../../images/facebook.svg" height="40" width="40" alt="facebook logo" />
               </a>
+
               {/* Twitter */}
-              <a class="tw-ic">
-                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
-                  {" "}
-                </i>
+              <a href="https://www.twitter.com">
+              <img src="./../../images/twitter.svg" height="40" width="40" alt="twitter logo" />
               </a>
 
               {/* Instagram */}
-              <a class="ins-ic">
-                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
-                  {" "}
-                </i>
+              <a href="https://www.instagram.com">
+              <img src="./../../images/instagram.svg" height="40" width="40" alt="instagram logo" />
               </a>
+
               {/* Pinterest */}
-              <a class="pin-ic">
-                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+              <a href="https://www.pinterest.com">
+              <img src="./../../images/pinterest.svg" height="40" width="40" alt="pinterest logo" />
               </a>
+
             </div>
           </div>
         </div>
