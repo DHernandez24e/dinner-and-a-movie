@@ -1392,19 +1392,17 @@ p.m-0 {
 }
 
 .footer {
-  /* position: fixed; */
+  position: fixed; 
   bottom: 0;
   width: 100%;
-  /* left: 0; */
+  left: 0;
   font-family: 'Pacifico', sans-serif;
   font-size: 1.5rem;
   padding: 0;
   line-height: 1.5;
-  /* background-color: var(--light); */
+  background-color: var(--light);
   color: var(--primary);
   text-align: center;
   width: 100%;
-  margin: 10px;
-
 }
 
